@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { TypographyComponent } from './typography/typography.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { ButtonToggleComponent } from './button-toggle/button-toggle.component';
+import { BadgeComponent } from './badge/badge.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TypographyComponent,
     ButtonsComponent,
-    ButtonToggleComponent
+    ButtonToggleComponent,
+    BadgeComponent
   ],
   imports: [
     BrowserModule,
