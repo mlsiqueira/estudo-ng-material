@@ -1,0 +1,75 @@
+<section>
+  <h1>Tipos de botões:</h1>
+  <button
+    mat-button
+    [color]="color.value"
+    [disabled]="disabled"
+    [disableRipple]="disableRipple">
+      Basic
+  </button>
+  <button
+    mat-raised-button
+    [color]="color.value"
+    [disabled]="disabled">
+      Raised
+  </button>
+  <button
+    mat-flat-button
+    [color]="color.value"
+    [disabled]="disabled"
+    [disableRipple]="disableRipple">
+      Flat
+  </button>
+  <button
+    mat-stroked-button
+    [color]="color.value"
+    [disabled]="disabled"
+    [disableRipple]="disableRipple">
+      Stroked
+  </button>
+
+  <button
+    mat-icon-button
+    [color]="color.value"
+    [disabled]="disabled"
+    [disableRipple]="disableRipple">
+      <mat-icon>favorite</mat-icon>
+  </button>
+  <button
+    mat-fab
+    [color]="color.value"
+    [disabled]="disabled"
+    [disableRipple]="disableRipple">
+      FAB
+  </button>
+  <button
+    mat-mini-fab
+    [color]="color.value"
+    [disabled]="disabled"
+    [disableRipple]="disableRipple">
+      FAB
+  </button>
+</section>
+
+<section>
+  <mat-button-toggle-group #color="matButtonToggleGroup">
+    <mat-button-toggle value="primary">primary</mat-button-toggle>
+    <mat-button-toggle value="accent">accent</mat-button-toggle>
+    <mat-button-toggle value="warn">warn</mat-button-toggle>
+    <mat-button-toggle value="">default</mat-button-toggle>
+  </mat-button-toggle-group>
+
+  <mat-slide-toggle
+    (change)="toggleDisabled()"
+    [checked]="!disabled">
+      <span *ngIf="!disabled">Desativar botões</span>
+      <span *ngIf="disabled">Ativar Botões</span>
+  </mat-slide-toggle>
+
+  <mat-slide-toggle
+    (change)="toggleRipple()"
+    [checked]="!disableRipple">
+      <span *ngIf="!disableRipple">Desativar efeito ripple</span>
+      <span *ngIf="disableRipple">Ativar efeito ripple</span>
+  </mat-slide-toggle>
+</section>
