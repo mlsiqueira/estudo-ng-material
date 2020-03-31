@@ -8,12 +8,14 @@ import { MaterialModule } from './material.module';
 import { AppComponent } from './app.component';
 import { TypographyComponent } from './typography/typography.component';
 import { ButtonsComponent } from './buttons/buttons.component';
+import { ButtonToggleComponent } from './button-toggle/button-toggle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TypographyComponent,
-    ButtonsComponent
+    ButtonsComponent,
+    ButtonToggleComponent
   ],
   imports: [
     BrowserModule,

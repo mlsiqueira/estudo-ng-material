@@ -1,0 +1,42 @@
+<section>
+  <mat-button-toggle-group name="group" #group="matButtonToggleGroup" [vertical]="vertical">
+    <mat-button-toggle value="left" aria-label="Text align left">
+      <mat-icon>format_align_left</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="center" [checked]="true" aria-label="Text align center">
+      <mat-icon>format_align_center</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="right" aria-label="Text align right">
+      <mat-icon>format_align_right</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="justify" disabled aria-label="Text align justify">
+      <mat-icon>format_align_justify</mat-icon>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+  <div class="example-selected-value">#group.value: {{ group.value }}</div>
+</section>
+
+<section>
+  <mat-button-toggle-group name="group" #letters="matButtonToggleGroup" multiple>
+    <mat-button-toggle value="A">A</mat-button-toggle>
+    <mat-button-toggle value="B">B</mat-button-toggle>
+    <mat-button-toggle value="C">C</mat-button-toggle>
+    <mat-button-toggle value="D">D</mat-button-toggle>
+    <mat-button-toggle value="E">E</mat-button-toggle>
+  </mat-button-toggle-group>
+  <div class="example-selected-value">Multiple: {{ letters.value }}</div>
+</section>
+
+<mat-slide-toggle
+  (change)="toggleVertical()"
+  [checked]="!vertical">
+    <span *ngIf="!vertical">Vertical</span>
+    <span *ngIf="vertical">Horizontal</span>
+</mat-slide-toggle>
+
+<mat-slide-toggle
+  (change)="toggleMultiple()"
+  [checked]="!multiple">
+    <span *ngIf="!multiple">Desativar multiplos</span>
+    <span *ngIf="multiple">Ativar multiplos</span>
+</mat-slide-toggle>
