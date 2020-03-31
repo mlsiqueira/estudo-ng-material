@@ -53,11 +53,25 @@
 
 <section>
   <mat-button-toggle-group #color="matButtonToggleGroup">
-    <mat-button-toggle value="primary">primary</mat-button-toggle>
-    <mat-button-toggle value="accent">accent</mat-button-toggle>
-    <mat-button-toggle value="warn">warn</mat-button-toggle>
-    <mat-button-toggle value="">default</mat-button-toggle>
+    <mat-button-toggle value="primary">
+      <mat-icon color="primary">format_paint</mat-icon>
+      primary
+    </mat-button-toggle>
+    <mat-button-toggle value="accent">
+      <mat-icon color="accent">format_paint</mat-icon>
+      accent
+    </mat-button-toggle>
+    <mat-button-toggle value="warn">
+      <mat-icon color="warn">format_paint</mat-icon>
+      warn
+    </mat-button-toggle>
+    <mat-button-toggle value="">
+      <mat-icon>format_paint</mat-icon>
+      default
+    </mat-button-toggle>
   </mat-button-toggle-group>
+
+  <br><br>
 
   <mat-slide-toggle
     (change)="toggleDisabled()"
